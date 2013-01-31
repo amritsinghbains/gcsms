@@ -37,11 +37,13 @@ You must set up a few things before using gcsms to send SMS:
 2. In Google Calendar (https://calendar.google.com),
    under 'Calendar Settings' -> 'Mobile Setup', enter your mobile number
    and verify it.
-3. In API Console (https://code.google.com/apis/console), under
-   Services, enable 'Calendar API'.
-4. In API Console, under 'API Access', create a new
-   'Client ID for installed applications' with application type of
-   'other' and note down the 'Client ID' and 'Client Secret'.
+3. In API Console (https://code.google.com/apis/console), click 'Create Project'
+   and enable 'Calendar API'.
+4. In API Console, under 'API Access', click 'Create an OAuth 2.0 client ID...'
+   and input 'gcsms' as Product Name. Click 'Next' and under 'Application type'
+   choose 'Installed application'. It should default to 'Other' in
+   'Installed application type' section. Finalize by clicking 'Create Client ID'
+   and note down 'Client ID' and 'Client Secret' from the following window.
 5. Edit `~/.gcsms` and enter the 'Client ID' and 'Client Secret' and
    save - see `sample.config` for the format of the config file
 6. Run `python gcsms.py auth` and follow the instructions, granting
