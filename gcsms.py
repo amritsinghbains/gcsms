@@ -634,8 +634,7 @@ def _cmd_auth(args, cfg, inst):
   # Store the refresh token in the config file
 
   cfg.set(_GLOBAL, 'refresh_token', refresh_token)
-  cfg.write(open(args.config + ".tmp", 'w'))
-  os.rename(args.config + ".tmp", args.config)
+  cfg.write(open(args.config, 'w'))
 
   print("Successful.")
 
