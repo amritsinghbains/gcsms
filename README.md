@@ -26,6 +26,10 @@ Sold. How do I do it?
 There are various scenarios in which gcsms can be used. We start with
 the most simple one and build on that.
 
+But before anything, install gcsms:
+
+    $ pip install gcsms
+
 Scenario A (single subscriber)
 ------------------------------
 You want to get an SMS every time your website returns a 5xx HTTP code.
@@ -37,31 +41,23 @@ You must set up a few things before using gcsms to send SMS:
 2. In Google Calendar (https://calendar.google.com),
    under 'Calendar Settings' -> 'Mobile Setup', enter your mobile number
    and verify it.
-3. In API Console (https://code.google.com/apis/console), click 'Create Project'
+3. In API Console (https://code.google.com/apis/console), click 'Create
+   Project'
    and enable 'Calendar API'.
-4. In API Console, under 'API Access', click 'Create an OAuth 2.0 client ID...'
-   and input 'gcsms' as Product Name. Click 'Next' and under 'Application type'
-   choose 'Installed application'. It should default to 'Other' in
-   'Installed application type' section. Finalize by clicking 'Create Client ID'
-   and note down 'Client ID' and 'Client Secret' from the following window.
+4. In API Console, under 'API Access', click 'Create an OAuth 2.0 client
+   ID...' and input 'gcsms' as Product Name. Click 'Next' and under
+   'Application type' choose 'Installed application'. It should default
+   to 'Other' in 'Installed application type' section. Finalize by
+   clicking 'Create Client ID' and note down 'Client ID' and 'Client
+   Secret' from the following window.
 5. Edit `~/.gcsms` and enter the 'Client ID' and 'Client Secret' and
    save - see `sample.config` for the format of the config file
-6. Run `python gcsms.py auth` and follow the instructions, granting
-   calendar access to gcsms.
+6. Run `gcsms.py auth` and follow the instructions, granting calendar
+   access to gcsms.
 
 At this point, you no longer need to use the web interface - everything
-can be done using gcsms commands. To avoid typing `python gcsms.py`, you
-should put a link to gcsms.py in one of the appropriate directories in
-`PATH`. Here's one way to do it, assuming `gcsms.py` is in your home
-directory:
-
-    $ GCSMS=~/gcsms.py
-    $ chmod +x $GCSMS
-    $ mkdir -p ~/bin
-    $ ln -s $GCSMS ~/bin/gcsms
-    $ echo 'export PATH="$PATH:~/bin"' >> ~/.bashrc
-
-Let's create a new messaging list (ie Calendar):
+can be done using gcsms commands. Let's create a new messaging list (ie
+Calendar):
 
     $ gcsms create web-health
     :hwernow_235nkjg@group.calendar.google.com
