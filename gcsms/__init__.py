@@ -878,6 +878,3 @@ def _load_config(path):
       '"client_id" and/or "client_secret" is missing in config')
 
   return cfg
-
-if __name__ == '__main__':
-  main()
