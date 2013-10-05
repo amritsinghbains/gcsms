@@ -27,7 +27,7 @@ __credits__ = ['Mansour Behabadi']
 __email__ = 'mansour@oxplot.com'
 __license__ = 'GPLv3'
 __maintainer__ = 'Mansour Behabadi'
-__version__ = '2.0'
+__version__ = '2.1'
 
 from datetime import datetime
 import argparse
