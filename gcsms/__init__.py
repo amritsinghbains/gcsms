@@ -77,6 +77,13 @@ _PATHS = {
   'acl-id': '/calendars/%s/acl/%s'
 }
 
+_VERINFO = """%s version %s
+%s
+This program is free software; you may redistribute it under the terms of the GNU General Public License version 3 or (at your options) any later version.
+This program comes with absolutely no warranty.""" % (
+  _PROGNAME, __version__, __copyright__
+)
+
 def _urlencval(val):
   """URL encode a single value."""
   return urlencode({'a': val})[2:]
@@ -641,6 +648,13 @@ def _cmd_auth(args, cfg, inst):
 def main():
   """Parse command line args and run appropriate command."""
 
+  # XXX don't know how to make the sub commands optional in presence of
+  # --version option. until I do, we treat it as a special case here
+
+  if any(a == '--version' for a in sys.argv[1:]):
+    print(_VERINFO)
+    exit(0)
+
   def add_idname(p):
     p.add_argument(
       'idname',
@@ -658,6 +672,11 @@ def main():
     default=os.path.expanduser('~/.gcsms'),
     metavar='FILE',
     help='path to config file - default is ~/.gcsms'
+  )
+  parser.add_argument(
+    '--version',
+    action='store_true',
+    help='show license and version of ' + _PROGNAME
   )
   subparsers = parser.add_subparsers(
     title='main commands',
