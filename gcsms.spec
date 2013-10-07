@@ -1,5 +1,5 @@
 %define name    gcsms
-%define version 2.1
+%define version 2.3
 %define release 1
 
 Name:           %{name}
@@ -11,7 +11,7 @@ Group:          Development/Libraries
 License:        GPLv3
 Source0:        %{name}-%{version}.tar.gz
 Vendor:         Mansour Behabadi <mansour@oxplot.com>
-URL:            http://code.oxplot.com/namuse
+URL:            https://github.com/oxplot/gcsms
 
 BuildArch:      noarch
 BuildRequires:  python >= 2.7
@@ -34,8 +34,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f INSTALLED_FILES
 %defattr(-,root,root)
-%doc README.md LICENSE
+%doc README.md LICENSE sample.config
 
 %changelog
-* Mon Oct 7 2013 Mansour Behabadi <mansour@oxplot.com> - 2.1-1
+* Mon Oct 7 2013 Mansour Behabadi <mansour@oxplot.com> - 2.3-1
 - Initial release

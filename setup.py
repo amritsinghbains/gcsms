@@ -8,9 +8,6 @@ setup(
   version = gcsms.__version__,
   packages = ['gcsms'],
   scripts = ['scripts/gcsms'],
-  data_files = [
-    ('share/doc/gcsms', ['sample.config', 'README.md', 'LICENSE'])
-  ],
 
   author = 'Mansour Behabadi',
   author_email = 'mansour@oxplot.com',

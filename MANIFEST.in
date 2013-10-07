@@ -1,1 +1,1 @@
-include gcsms.spec MANIFEST.in README.rst
+include gcsms.spec MANIFEST.in README.rst sample.config README.md LICENSE
