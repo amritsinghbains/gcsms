@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import gcsms
+
+if __name__ == '__main__':
+  gcsms.main()

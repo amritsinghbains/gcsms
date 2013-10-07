@@ -1,20 +1,16 @@
 #!/usr/bin/env python
 
-import ez_setup
-ez_setup.use_setuptools()
-
-from setuptools import setup, find_packages
+from distutils.core import setup
 import gcsms
 
 setup(
   name = 'gcsms',
   version = gcsms.__version__,
   packages = ['gcsms'],
-  entry_points = {
-    'console_scripts': [
-      'gcsms = gcsms:main'
-    ]
-  },
+  scripts = ['scripts/gcsms'],
+  data_files = [
+    ('share/doc/gcsms', ['sample.config', 'README.md', 'LICENSE'])
+  ],
 
   author = 'Mansour Behabadi',
   author_email = 'mansour@oxplot.com',
