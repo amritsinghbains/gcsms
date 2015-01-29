@@ -30,6 +30,8 @@ But before anything, install gcsms:
 
     $ pip install gcsms
 
+gcsms is also available in [AUR][].
+
 Scenario A (single subscriber)
 ------------------------------
 You want to get an SMS every time your website returns a 5xx HTTP code.
@@ -224,3 +226,4 @@ shortlog, and should summarize the change in one readable line of text,
 independently of the longer explanation.
 
 [sample]: https://github.com/oxplot/gcsms/blob/master/sample.config
+[AUR]: https://aur.archlinux.org/packages/gcsms-git/
