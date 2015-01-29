@@ -93,7 +93,7 @@ you will not receive any SMSes until you _unmute_ the messaging list:
     $ gcsms ls -l
     rwo-  web-health  :hwernow_235nkjg@group.calendar.google.com
 
-_Note: All messaging lists you create or join are muted by default._
+**Note: All messaging lists you create or join are muted by default.**
 
 At this stage, you can send yourself a message:
 
